@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全國制霸｜作品集總覽</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700;900&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #111; /* 深色背景 */
+            color: #fff;
+            /* 模擬籃球場木紋/線條的簡單漸層背景 */
+            background-image: repeating-linear-gradient(
+                45deg,
+                #1a1a1a,
+                #1a1a1a 10px,
+                #111 10px,
+                #111 20px
+            );
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 5px solid #d82c2c; /* 湘北紅 */
+            padding-bottom: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #d82c2c;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 2px 2px 0px #fff, 4px 4px 0px #000;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #ccc;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .subtitle span {
+            color: #d82c2c;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .project-card {
+            background-color: #222;
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(216, 44, 44, 0.4), transparent);
+            transition: all 0.4s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            border-color: #d82c2c;
+            box-shadow: 0 10px 20px rgba(216, 44, 44, 0.3);
+            background-color: #1a0505;
+        }
+
+        .project-card:hover::before {
+            left: 100%;
+        }
+
+        .project-number {
+            font-size: 2.5rem;
+            color: rgba(255, 255, 255, 0.1);
+            position: absolute;
+            top: -5px;
+            right: 10px;
+            font-weight: 900;
+            font-style: italic;
+        }
+
+        .project-card:hover .project-number {
+            color: rgba(216, 44, 44, 0.3);
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-weight: 900;
+            color: #fff;
+        }
+
+        .project-card:hover .project-title {
+            color: #e56b1f; /* 籃球橘 */
+        }
+
+        .project-url {
+            font-size: 0.8rem;
+            color: #888;
+            word-break: break-all;
+        }
+
+        footer {
+            margin-top: auto;
+            padding-top: 40px;
+            color: #666;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>全國制霸</h1>
+        <div class="subtitle">「教練，我想寫網頁...」 <span>#ShohokuStyle</span></div>
+    </header>
+
+    <div class="grid-container">
+        <a href="https://ruby1030323-hub.github.io/dice/" target="_blank" class="project-card">
+            <div class="project-number">10</div>
+            <div class="project-title">Dice (骰子)</div>
+            <div class="project-url">/dice/</div>
+        </a>
+
+        <a href="https://ruby1030323-hub.github.io/poke/" target="_blank" class="project-card">
+            <div class="project-number">11</div>
+            <div class="project-title">Poke (寶可夢)</div>
+            <div class="project-url">/poke/</div>
+        </a>
+
+        <a href="https://ruby1030323-hub.github.io/poke1/" target="_blank" class="project-card">
+            <div class="project-number">14</div>
+            <div class="project-title">Poke 1</div>
+            <div class="project-url">/poke1/</div>
+        </a>
+
+        <a href="https://ruby1030323-hub.github.io/2D/" target="_blank" class="project-card">
+            <div class="project-number">07</div>
+            <div class="project-title">2D Project</div>
+            <div class="project-url">/2D/</div>
+        </a>
+
+        <a href="https://ruby1030323-hub.github.io/mp3/" target="_blank" class="project-card">
+            <div class="project-number">04</div>
+            <div class="project-title">MP3 Player</div>
+            <div class="project-url">/mp3/</div>
+        </a>
+
+        <a href="https://ruby1030323-hub.github.io/school/" target="_blank" class="project-card">
+            <div class="project-number">05</div>
+            <div class="project-title">School</div>
+            <div class="project-url">/school/</div>
+        </a>
+
+        <a href="https://ruby1030323-hub.github.io/clock/" target="_blank" class="project-card">
+            <div class="project-number">09</div>
+            <div class="project-title">Clock (時鐘)</div>
+            <div class="project-url">/clock/</div>
+        </a>
+
+        <a href="https://ruby1030323-hub.github.io/soccer/" target="_blank" class="project-card">
+            <div class="project-number">08</div>
+            <div class="project-title">Soccer (足球)</div>
+            <div class="project-url">/soccer/</div>
+        </a>
+
+        <a href="https://ruby1030323-hub.github.io/Conan/" target="_blank" class="project-card">
+            <div class="project-number">01</div>
+            <div class="project-title">Conan (柯南)</div>
+            <div class="project-url">/Conan/</div>
+        </a>
+    </div>
+
+    <footer>
+        © 2026 稱霸全國網頁開發團隊
+    </footer>
+
+</body>
+</html>
